@@ -1,0 +1,39 @@
+body {
+    font-family: Verdana;
+    background-color: #fcfcfc;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #6d489a; 
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+nav {
+    background-color: #6d489a; 
+    padding: 25px 0;
+    text-align: center;
+}
+nav a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    margin: 0 20px;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+div.manual {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+div.manual img{
+    border: 2px solid black;
+    width: 40%;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 20px;}

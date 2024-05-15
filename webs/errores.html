@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/errores.css">
+    <link rel="icon" href="../img/logoApp_white.png" type="image/x-icon">
+    <title>TicketMaster</title>
+</head>
+<body>
+    <nav>
+        <a href="../index.html">Inicio</a>
+        <a href="cronograma.html">Cronograma</a>
+        <a href="basededatos.html">Base de Datos</a>
+        <a href="diagramas.html">Diagramas</a>
+        <a href="manual.html">Manual</a>
+        <a href="errores.html">Errores</a>
+    </nav>
+    <div class="errores">
+        <h3>Model</h3>
+        <p>Por suerte, en todo el proyecto solo he tenido un error que me ha dado problemas mayores, y fue la inyeccion del model al principio. Como cambiava entre clases, no compartian el mismo modelo, y acababa dandome "model is null" siempre que cambiaba de pantalla.</p>
+        <h4>Solucion:</h4>
+        <p>Crear una funcion para inyectar el modelo en todos los controladores, y iniciarlo en App.java, y cada vez que hacia falta llamar al model, usaba un getter de éste.</p>
+        <br>
+        <p>Ejemplo de App.Java</p>
+        <img src="../img/error_1.jpg" alt="App">
+        <p>Y de como se llamaria al iniciar el controlador.</p>
+        <img src="../img/error_2.jpg" alt="App">
+    </div>
+</body>
+</html>

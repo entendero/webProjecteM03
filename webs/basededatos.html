@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/basededatos.css">
+    <link rel="icon" href="../img/logoApp_white.png" type="image/x-icon">
+    <title>TicketMaster</title>
+</head>
+<body>
+    <nav>
+        <a href="../index.html">Inicio</a>
+        <a href="cronograma.html">Cronograma</a>
+        <a href="basededatos.html">Base de Datos</a>
+        <a href="diagramas.html">Diagramas</a>
+        <a href="manual.html">Manual</a>
+        <a href="errores.html">Errores</a>
+    </nav>
+
+    <div class="cuerpo">
+        <p>Empecé haciendo el <a href="#diseño_conceptual"><strong>diseño conceptual</strong></a> y el <a href="#diseño_logico"><strong>diseño logico</strong></a>, con la aplicación web <a href="https://drive.google.com/file/d/1oiqmwdBFdsGzugsEzCwfJGFVdFPaiprJ/view?usp=sharing"><strong>draw.io</strong></a>. Después, pasé el diseño logico a <a href="#diseño_fisico"><strong>diseño fisico</strong></a>, y lo pasé a <a href="#vistaBD"><strong>mariaDB</strong></a></p>
+    </div>
+
+    <div class="diseños">
+    <h2 id="diseño_conceptual">DISEÑO CONCEPTUAL</h2>
+    <img src="../img/diseno_conceptual.png" alt="diseño conceptual">
+    <br>
+    <hr>
+    <br>
+    <h2 id="diseño_logico">DISEÑO LOGICO</h2>
+    <img src="../img/diseno_logico.png" alt="diseño logico" width="50%">
+    <br>
+    <hr>
+    <br>
+    <h2 id="diseño_fisico">DISEÑO FISICO</h2>
+    <div class="diseño_fisico">
+        <p>
+            <strong>CREATE TABLE Usuario</strong> (<br>
+            &nbsp;&nbsp;NIF VARCHAR(9) PRIMARY KEY,<br>
+            &nbsp;&nbsp;Nombre VARCHAR(50),<br>
+            &nbsp;&nbsp;Apellidos VARCHAR(50),<br>
+            &nbsp;&nbsp;Usuario VARCHAR(50),<br>
+            &nbsp;&nbsp;Contrasenya VARCHAR(50),<br>
+            &nbsp;&nbsp;Departamento VARCHAR(50)<br>
+            );
+        </p>
+        
+        <p>
+            <strong>CREATE TABLE Tecnico</strong> (<br>
+            &nbsp;&nbsp;NIF VARCHAR(9) PRIMARY KEY,<br>
+            &nbsp;&nbsp;Nombre VARCHAR(50),<br>
+            &nbsp;&nbsp;Apellidos VARCHAR(50),<br>
+            &nbsp;&nbsp;Usuario VARCHAR(50),<br>
+            &nbsp;&nbsp;Contrasenya VARCHAR(50),<br>
+            &nbsp;&nbsp;Equipo VARCHAR(50)<br>
+            );
+        </p>
+        
+        <p>
+            <strong>CREATE TABLE Ticket</strong> (<br>
+            &nbsp;&nbsp;ID INT PRIMARY KEY,<br>
+            &nbsp;&nbsp;Titulo VARCHAR(100),<br>
+            &nbsp;&nbsp;Descripcion VARCHAR(255),<br>
+            &nbsp;&nbsp;Urgencia VARCHAR(20),<br>
+            &nbsp;&nbsp;Estado VARCHAR(20),<br>
+            &nbsp;&nbsp;Fecha_Generado DATE,<br>
+            &nbsp;&nbsp;Fecha_Resuelto DATE,<br>
+            &nbsp;&nbsp;NIFUser VARCHAR(9),<br>
+            &nbsp;&nbsp;FOREIGN KEY(NIFUser) REFERENCES Usuario(NIF) ON DELETE SET NULL<br>
+            );
+        </p>
+        
+        <p>
+            <strong>CREATE TABLE Asignado_a</strong> (<br>
+            &nbsp;&nbsp;NIF VARCHAR(9),<br>
+            &nbsp;&nbsp;ID INT,<br>
+            &nbsp;&nbsp;FOREIGN KEY (NIF) REFERENCES Tecnico(NIF) ON DELETE CASCADE,<br>
+            &nbsp;&nbsp;FOREIGN KEY (ID) REFERENCES Ticket(ID) ON DELETE CASCADE,<br>
+            &nbsp;&nbsp;PRIMARY KEY (NIF, ID)<br>
+            );
+        </p>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <h2 id="vistaBD">VISTA BASE DE DATOS</h2>
+    <img src="../img/vista_basedades.PNG" alt="Vista Base de datos" width="50%">
+
+    </div>
+</body>
+</html>

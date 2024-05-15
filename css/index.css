@@ -1,0 +1,43 @@
+body {
+    font-family: Verdana;
+    background-color: #fcfcfc;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #6d489a; 
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+nav {
+    background-color: #6d489a; 
+    padding: 25px 0;
+    text-align: center;
+}
+nav a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    margin: 0 20px;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+.cuerpo {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+img.logo{
+    position: relative;
+    left: 38%;
+}
+h1 {
+    color: #6a1b9a;
+}
+p.descripcion {
+    text-align: justify;
+    max-width: 1000px;
+    margin: 0 auto;
+}

@@ -1,0 +1,58 @@
+body {
+    font-family: Verdana;
+    background-color: #fcfcfc;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #6d489a; 
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+nav {
+    background-color: #6d489a; 
+    padding: 25px 0;
+    text-align: center;
+}
+nav a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    margin: 0 20px;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+div.cuerpo {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+div.diseños {
+    max-width: 90%;
+    margin: 20px;
+    padding: 0 20px;
+}
+
+div.diseños h2{
+    margin-left: 50px;
+}
+
+div.diseños img{
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+div.diseño_fisico{
+    max-width: 41%;
+    background-color: rgb(219, 219, 219);
+    border-radius: 10px;
+    margin: 20px;
+    padding: 0 20px;
+    border: 1px solid black;
+}

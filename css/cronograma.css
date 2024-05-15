@@ -1,0 +1,61 @@
+body {
+    font-family: Verdana;
+    background-color: #fcfcfc;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #6d489a; 
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+nav {
+    background-color: #6d489a; 
+    padding: 25px 0;
+    text-align: center;
+}
+nav a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    margin: 0 20px;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+table {
+    background-color: #e8e7e7;
+    margin: 5%;
+    border: 2px solid black;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 90%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+td.completat {
+    background-color: #36a03a;
+    color: white;
+}
+
+th {
+    background-color: #924dbd; 
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
